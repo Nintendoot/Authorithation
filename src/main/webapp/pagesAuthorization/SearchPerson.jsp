@@ -6,8 +6,31 @@
     <title>Search</title>
 </head>
 <body>
-<jsp:include page="_header.jsp"/>
-<ul> Search : ${requestScope.per}</ul>
 
+<jsp:include page="_header.jsp"/>
+<div class="container">
+    <h3>Search</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Country</th>
+            <th>Login</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> ${requestScope.per.name}</td>
+                <td> ${requestScope.per.surname}</td>
+                <td> ${requestScope.per.age}</td>
+                <td> ${requestScope.per.location}</td>
+                <td> ${requestScope.per.login}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
 </body>
 </html>
