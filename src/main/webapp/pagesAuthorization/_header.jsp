@@ -62,7 +62,7 @@
                     <a class="nav-link" href="/out" >Exit</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/acc" >basket</a>
+                    <a class="nav-link" href="/acc" >Basket</a>
                 </li>
             </ul>
             </c:if>

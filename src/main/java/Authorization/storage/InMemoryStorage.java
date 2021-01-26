@@ -19,18 +19,6 @@ public class InMemoryStorage {
 
     }
 
-
-    public boolean chekingLogin(Person person) {
-        boolean chek = true;
-        for (Person per : personList) {
-            if (per.getLogin().compareTo(person.getLogin())==0) {
-                chek = false;
-                break;
-            }
-        }
-        return chek;
-    }
-
     public Person byLogin(String login){
         for(Person p:personList){
             if(p.getLogin().equals(login)){

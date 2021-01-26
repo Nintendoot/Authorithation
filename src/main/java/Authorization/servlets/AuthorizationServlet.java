@@ -1,7 +1,6 @@
 package Authorization.servlets;
 
 import Authorization.model.Person;
-import Authorization.model.Rule;
 import Authorization.storage.InMemoryStorage;
 
 import javax.servlet.ServletException;

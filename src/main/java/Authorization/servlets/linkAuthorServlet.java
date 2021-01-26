@@ -1,7 +1,6 @@
 package Authorization.servlets;
 
 import Authorization.model.Author;
-import Authorization.model.Book;
 import Authorization.storage.AuthorsInMemoryStorage;
 
 import javax.servlet.ServletException;

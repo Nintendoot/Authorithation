@@ -1,26 +1,27 @@
 package Calculator.Modul;
 
 public class Calculator {
+    double result;
     public Calculator() {
     }
 
     public double sum(double one, double two) {
-        double result = one + two;
+         result = one + two;
         return result;
     }
 
     public double minus(double one, double two) {
-        double result = one - two;
+      result = one - two;
         return result;
     }
 
     public double umnoz(double one, double two) {
-        double result = one * two;
+         result = one * two;
         return result;
     }
 
     public double del(double one, double two) {
-        double result = one / two;
+         result = one / two;
         return result;
     }
 

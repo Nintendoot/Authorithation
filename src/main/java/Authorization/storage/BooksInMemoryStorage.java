@@ -12,12 +12,12 @@ public class BooksInMemoryStorage {
     private static final List<Book> bookList=new ArrayList<>();
 private static BooksInMemoryStorage booksInMemory;
    static {
-       BooksInMemoryStorage.createBook("Voina i mir","dsdcsc","sdsgbfgbdcsdc",AuthorsInMemoryStorage.getAuthorById(2),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
-       BooksInMemoryStorage.createBook("gbgfb","dsdcsc","sdsdgbfgbfgcsdc",AuthorsInMemoryStorage.getAuthorById(1),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
-       BooksInMemoryStorage.createBook("Vgfbfr","dsdcsc","sdsdcgbfgbsdc",AuthorsInMemoryStorage.getAuthorById(3),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
-       BooksInMemoryStorage.createBook("Voigbfgbir","dsdcsc","sdsdfgbfgbcsdc",AuthorsInMemoryStorage.getAuthorById(2),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
-       BooksInMemoryStorage.createBook("Vofgbmir","dsdcsc","sdsdcsdc",AuthorsInMemoryStorage.getAuthorById(1),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
-       BooksInMemoryStorage.createBook("Vg mir","dsdcgbgfbsc","sdsdcgbfgbsdc",AuthorsInMemoryStorage.getAuthorById(1),"https://www.clipartmax.com/png/full/35-359277_book-read-library-reading-education-school-libro-png.png");
+       BooksInMemoryStorage.createBook("Три мушкетера","Приключения","Some Text.",AuthorsInMemoryStorage.getAuthorById(2),"https://www.100bestbooks.ru/pictures/books/Dartagnan_i_tri_musketera.jpg");
+       BooksInMemoryStorage.createBook("Мастер и Маргарита","Роман","Some Text.",AuthorsInMemoryStorage.getAuthorById(1),"https://www.100bestbooks.ru/pictures/books/Bulgakov_Master_i_Margarita.jpg");
+       BooksInMemoryStorage.createBook("Мёртвые души","Поэма","Some Text.",AuthorsInMemoryStorage.getAuthorById(3),"https://www.100bestbooks.ru/pictures/books/Dead_Souls_Gogol_1842.jpg");
+       BooksInMemoryStorage.createBook("Обломов","Классика","Some Text.",AuthorsInMemoryStorage.getAuthorById(2),"https://www.100bestbooks.ru/pictures/books/Oblomov_1858.jpg");
+       BooksInMemoryStorage.createBook("Отверженные","История","Some Text.",AuthorsInMemoryStorage.getAuthorById(1),"https://www.100bestbooks.ru/pictures/books/les_miserables.jpg");
+       BooksInMemoryStorage.createBook("Старик и море","Повесть","Some Text.",AuthorsInMemoryStorage.getAuthorById(1),"https://www.100bestbooks.ru/pictures/books/old_man_and_sea_book.jpg");
 
 
     }

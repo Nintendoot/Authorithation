@@ -1,7 +1,6 @@
 package Authorization.servlets;
 
 import Authorization.model.Author;
-import Authorization.model.Book;
 import Authorization.storage.AuthorsInMemoryStorage;
 import Authorization.storage.BooksInMemoryStorage;
 
@@ -13,9 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/addBooks", name = "/servles/AddBooksServlet")
+@WebServlet(urlPatterns = "/addBooks")
 public class AddBooksServlet extends HttpServlet {
-    AuthorsInMemoryStorage authors = AuthorsInMemoryStorage.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,7 +24,7 @@ public class AddBooksServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try {
+
             String name = req.getParameter("name");
             String genre = req.getParameter("genre");
             String discription = req.getParameter("discription");
@@ -40,10 +38,5 @@ public class AddBooksServlet extends HttpServlet {
             } else {
                 resp.sendRedirect("/addAuthor");
             }
-        } catch (NumberFormatException e) {
-
-        }
-
-
     }
 }

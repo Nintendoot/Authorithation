@@ -9,9 +9,9 @@ public class AuthorsInMemoryStorage {
     private static final List<Author> authorList=new ArrayList<>();
     private static AuthorsInMemoryStorage authorsInMemoryStorage;
 static {
-    authorList.add(new Author(1,"Oleg","Tereshkov","discription1"));
-    authorList.add(new Author(2,"Misha","Grishynin","discription2"));
-    authorList.add(new Author(3,"Andrey","Volski","discription3"));
+    authorList.add(new Author(1,"Oleg","Tereshkov","Some Text."));
+    authorList.add(new Author(2,"Misha","Grishynin","Some Text."));
+    authorList.add(new Author(3,"Andrey","Volski","Some Text."));
 
 
 }

@@ -15,19 +15,19 @@
             <div class="col">
                 <div class="card" style="width: 18rem;">
             <img src="${book.img}" class="card-img-top" alt="...">
-
                     <div class="container">
                         <form action="/linkAuthor" method="get">
+                            <h4>${book.name}</h4>
                             <input type="hidden" name="id" value="${book.author.id}">
                             <button>${book.author}</button>
+                            <h5 class="card-title">Genre: ${book.genre}</h5>
                         </form>
-                <h5 class="card-title">Genre: ${book.genre}</h5>
+                     <c:if test="${sessionScope.isUser}">
                         <form action="/basket" method="get">
                             <input type="hidden" name="id" value="${book.id}">
                             <button>Add</button>
                         </form>
-
-
+                     </c:if>
             </div>
         </div>
     </div><br>
