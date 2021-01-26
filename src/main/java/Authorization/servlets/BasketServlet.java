@@ -1,5 +1,6 @@
 package Authorization.servlets;
 
+import Authorization.model.Basket;
 import Authorization.model.Book;
 import Authorization.storage.BooksInMemoryStorage;
 
@@ -9,16 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/home")
-public class HomeServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/basket")
+public class BasketServlet extends HttpServlet {
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-     ArrayList<Book> books=BooksInMemoryStorage.getInstance().getAllBook();
-     req.setAttribute("books",books);
-        getServletContext().getRequestDispatcher("/pagesAuthorization/index.jsp").forward(req,resp);
+        String id = req.getParameter("id");
+        Book byId = BooksInMemoryStorage.getById(Integer.parseInt(id));
+        Basket basket = (Basket) req.getSession().getAttribute("basket");
+        basket.addBook(byId);
+       getServletContext().getRequestDispatcher("/home").forward(req,resp);
     }
-
-
 }

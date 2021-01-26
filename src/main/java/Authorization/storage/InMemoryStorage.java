@@ -1,17 +1,23 @@
 package Authorization.storage;
 
 import Authorization.model.Person;
+import Authorization.model.Rule;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemory {
+public class InMemoryStorage {
     private static List<Person> personList = new ArrayList<>();
 
     public  List<Person> AllPerson() {
         return new ArrayList<>(personList);
     }
 
+    static {
+
+            personList.add(new Person("Admin","admin",23,"admin","admin","Belarus",Rule.ADMIN));
+
+    }
 
 
     public boolean chekingLogin(Person person) {

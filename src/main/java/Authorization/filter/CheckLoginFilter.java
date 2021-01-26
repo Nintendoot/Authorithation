@@ -1,7 +1,7 @@
 package Authorization.filter;
 
 import Authorization.model.Person;
-import Authorization.storage.InMemory;
+import Authorization.storage.InMemoryStorage;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebFilter(servletNames = "AuthorizationServlet")
 public class CheckLoginFilter extends HttpFilter {
-    final private static InMemory memory = new InMemory();
+    final private static InMemoryStorage memory = new InMemoryStorage();
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {

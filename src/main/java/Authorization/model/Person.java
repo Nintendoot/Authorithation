@@ -7,8 +7,9 @@ public class Person implements Comparable<Person> {
     private String surname;
     private int age;
     private String login;
-private String password;
-private String location;
+    private String password;
+    private String location;
+    private Rule rule;
 
     public Person(String name, String surname, int age, String login, String password, String location) {
         this.name = name;
@@ -18,6 +19,15 @@ private String location;
         this.password = password;
         this.location = location;
     }
+    public Person(String name, String surname, int age, String login, String password, String location,Rule rule ) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.login = login;
+        this.password = password;
+        this.location = location;
+        this.rule=rule;
+    }
 
     public Person() {
     }
@@ -25,6 +35,14 @@ private String location;
     public Person(String login, String password) {
         this.login = login;
         this.password = password;
+    }
+
+    public Rule getRule() {
+        return rule;
+    }
+
+    public void setRule(Rule rule) {
+        this.rule = rule;
     }
 
     public String getName() {

@@ -1,7 +1,7 @@
 package Authorization.servlets;
 
 import Authorization.model.Person;
-import Authorization.storage.InMemory;
+import Authorization.storage.InMemoryStorage;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @WebServlet(urlPatterns = "/all")
 public class FindAllPerson extends HttpServlet {
-  private final  InMemory memory=new InMemory();
+  private final InMemoryStorage memory=new InMemoryStorage();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

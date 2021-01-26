@@ -1,7 +1,7 @@
 package Authorization.servlets;
 
 import Authorization.model.Person;
-import Authorization.storage.InMemory;
+import Authorization.storage.InMemoryStorage;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +12,12 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/reg",name = "RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
-    final private static InMemory memory=new InMemory();
+    final private static InMemoryStorage memory=new InMemoryStorage();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
